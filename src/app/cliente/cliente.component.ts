@@ -76,7 +76,7 @@ delet(cliente: Cliente){
     dialogRef.afterClosed().subscribe(result => {
         if(result){
           this.apiCliente.delete(cliente.id).subscribe(response =>{
-            if(response.exito === 1){
+            if(response.exito == 1){
                 this.snackBar.open('Cliente eliminado con exito', '',{
                   duration: 2000
                 });
